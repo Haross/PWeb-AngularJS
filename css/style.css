@@ -1,0 +1,159 @@
+*{
+	padding: 0px;
+	margin: 0px;
+
+}
+html,body{
+	height:100%;
+	overflow-x:hidden!important;
+}
+.fondoA{
+	background-image: url('../img/fondoA.png');
+	background-size: cover;
+
+}
+.fondoB{
+	background-image: url('../img/fondoB.png') !important;
+	background-size: cover;
+
+}
+
+.white{
+	color: white;
+}
+.imgn{
+	width: 100%;
+	height: auto;
+}
+.absolute{
+	position: absolute;
+}
+.top{
+	top:0;
+}
+.animacion-logo{
+	animation: floating_special 3500ms ease forwards;
+	    animation-name: floating_special;
+    animation-duration: 3500ms;
+    animation-timing-function: ease;
+    animation-delay: initial;
+    animation-iteration-count: initial;
+    animation-direction: initial;
+    animation-fill-mode: forwards;
+    animation-play-state: initial;
+}
+.et-floating_special{
+	animation-iteration-count: infinite !important;
+	-webkit-animation-iteration-count: infinite !important;
+	opacity:1 !important;
+}
+@keyframes floating_special {
+	0% {
+		transform: translateY(0%);
+	}
+	50% {
+		transform: translateY(8%);
+	}
+	100% {
+		opacity:1;
+		transform: translateY(0%);
+	}
+}
+@-webkit-keyframes floating_special {
+	0% {
+		-webkit-transform: translateY(0%);
+	}
+	50% {
+		-webkit-transform: translateY(8%);
+	}
+	100% {
+		opacity:1;
+		-webkit-transform: translateY(0%);
+	}
+}
+
+
+
+/* ---------------------------------------- */
+/* A F T E R    B E F O R E    S T Y L E
+/* ---------------------------------------- */
+#before-after{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	min-height:650px;
+	z-index:1;
+}
+#before-after img{
+	max-width:none;
+}
+.list-circle{
+	list-style-type: circle;
+}
+
+.view {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.view-before {
+	z-index: 100;
+}
+.view-after {
+	z-index: 200;
+
+}
+#dragme {
+	position: absolute;
+	width: 2px;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background-color: #EC6367;
+	cursor: pointer;
+	z-index: 300;
+}
+#dragme .icon-drag{
+	width:30px;
+	height:30px;
+	background:url(../img/drag-icon.png) no-repeat center center;
+	display:block;
+	position:absolute;
+	top:50%;
+	left:-15px;
+	margin-top:-15px;
+}
+.wrapper-after, .wrapper-before{
+	position:relative;
+	height:100%;
+}
+.wrapper-after .img-bird-wrapper, .wrapper-before .img-bird-wrapper{
+	position:absolute;
+	left:0;
+	right:0;
+	margin:0 auto;
+	top:50%;
+	margin-top:-250px;
+	z-index:9;
+}
+.img-bird-wrapper{
+	width:500px;
+	height:385px;
+	display:block;
+}
+.img-bird-wrapper img{
+	width:100%;
+	height:auto;
+}
+.shadown-bird{
+	background:url(https://static.enginethemes.com/main/img/shadow.png) no-repeat center center;
+	width:240px;
+	height:25px;
+	display:block;
+	position:absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	bottom: 25%;
+}

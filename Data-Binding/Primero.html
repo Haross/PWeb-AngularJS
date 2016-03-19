@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script>
+<script src="angular.js"></script>
+<link rel="stylesheet" type="text/css" href="segundo.css">
+<meta charset=utf-8 />
+<title>JS Bin</title>
+</head>
+<body ng-app='ModalDemo'>
+	<div id="linea" ></div>
+	<div ng-controller='MyCtrl'>
+		<label id="t1" >{{puntos}}</label><h1>{{titulo}}</h1><label id="t2">{{puntos}}</label>
+	</div>
+
+
+	<div ng-controller='MyCtrl' id="primero">
+	<img src="ima.png">
+	<p class="nota">{{com1}}</p>
+    <button ng-click='toggleModal()' id="boto1">{{dato}}</button>
+    <modal-dialog show='modalShown' width='450px' height='60%' id="ventana1">
+			<br>
+			<br>
+    		El enlace de datos en las aplicaciones Angular se realiza mediante
+				la sincronización entre los componentes del modelo y la vista.
+				<br>
+				<br>
+				La vista es una proyección del modelo en todo momento.
+				Cuando cambia el modelo, la vista refleja el cambio, y viceversa.
+    </modal-dialog>
+  </div>
+	<div ng-controller='MyCtrl' id="segundo">
+	<img src="directions.jpg">
+	<p class="nota">{{com2}}</p>
+    <button ng-click='toggleModal()' id="boto2">{{dato}}</button>
+    <modal-dialog show='modalShown' width='450px' height='60%'>
+			<br>
+  		Las directivas son nuevos atrubutos que pueden ser agragados<br>
+			al documento HTML.
+			<br><br>
+			Las directivas en angularJS llevan el prefijo "ng-"
+			<br>
+			Ejemplos:
+			<br>
+			<br>
+	   &nbsp;&nbsp;&nbsp;ng-app: Inicializa la aplicación Angular.
+		 <br>
+		 <br>
+		 &nbsp;&nbsp;&nbsp;ng-init: Inicializa la aplicaión de datos.
+		 <br>
+		 <br>
+		 &nbsp;&nbsp;&nbsp;ng-model:Enlaza los valores de los controles HTML <br>
+		 &nbsp;&nbsp; a la aplicación de datos.
+
+    </modal-dialog>
+  </div>
+  <div ng-controller='MyCtrl' id="tercero">
+  	<img src="pic.jpg">
+  	<p class="nota">{{com3}}</p>
+    <button ng-click='toggleModal()' id="boto3">{{dato}}</button>
+    <modal-dialog show='modalShown' width='450px' height='60%'>
+			<br>
+    	Los filtros en Angular nos permiten darle formato a los datos.
+			<br>
+			<br>
+			AngularJS provee de diversos filtros para darle el formato a los datos
+			que sea necesario.
+			<br>
+			<br>
+			Ejemplos:
+				<br><br>
+				&nbsp;&nbsp;lowercase <br>
+				&nbsp;&nbsp;orderBy <br>
+				&nbsp;&nbsp;uppercase <br>
+				&nbsp;&nbsp;date
+    </modal-dialog>
+  </div>
+</body>
+</html>

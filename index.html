@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="../image/png" href="img/logoO.png" />
+	<meta charset= "utf-8">
+  <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/historia.css">
+	<link rel="stylesheet" href="css/estiloQ.css">
+  <link rel="stylesheet" href="css/botonP.css" >
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/segundo.css">
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/historia.js"></script>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/TweenMax.min.js"></script>
+<script type="text/javascript" src="js/Draggable.min.js"></script>
+	<script type="text/javascript" src="js/controller.js"></script>
+
+	<title>Angular JS</title>
+</head>
+
+<body ng-app="HistApp">
+
+<div id="before-after" ng-controller="portada">
+    <div class="view view-after fondoA" style="width: 670px;">
+      <div class="wrapper-after" style="width: 1263px;">
+          <div class="img-bird-wrapper  et-floating_special animacion-logo">
+          <img class="imgn" src="img/logoO.png">
+
+        </div>
+        <div >
+          <ul class="names-list"  style=" position: absolute; left: 20px; top: 150px;  font-size: 1.4em;" >
+            <li class="list-circle white" ng-repeat="name in names" >{{name.nombre+ "   " +name.matricula +"     "}}</li>
+          </ul>
+          <p class="white" style="position: absolute; left:20px;top:280px;font-size:1.4em;">
+            
+          </p><br><br><br><br>
+          <p class="white" style="position: absolute; left:20px;top:300px; font-size:1.4em;">Programación web<br> Ingeniería en Desarrollo de Software <br> 5to Cuatrimestre <br> Corte 3 <br> Dr. Juan Carlos López Pimentel <br> Viernes 18 de Marzo de 2016.
+          </p>
+
+            <button type="submit" class="boton-portada" onclick="window.open('AngularP/store.html')" >Ver práctica</button>
+        </div>
+      </div>
+    </div>
+    <div class="view view-before fondoB">
+
+      <div class="wrapper-before">
+          <div class="img-bird-wrapper  et-floating_special animacion-logo">
+          <img style=" left: -43px;position: absolute;"class="imgn" src="img/logo.png">
+
+            </div>
+            <div class="">
+
+              <ul class="names-list" style=" position: absolute; left: 20px; top: 150px;  font-size: 1.4em;" >
+                <li class="list-circle" ng-repeat="name in names">{{name.nombre+ "   " +name.matricula +"     "}}</li>
+              </ul>
+              <p class="white" style="position: absolute; left:20px;top:280px;font-size:1.4em;">
+                Programación web
+              </p>
+              <p class="white" style="position: absolute; left:20px;top:300px; font-size:1.4em;">
+                Dr. Juan Carlos López Pimentel
+              </p>
+
+              <button id="botonP" type="submit" class="boton-portada" onclick="window.open('AngularP/store.html')" >Ver práctica</button>
+            </div>
+        </div>
+
+    </div>
+    <div id="dragme">
+      <span class="icon-drag"></span>
+    </div>
+</div>
+
+
+
+
+	<div id="historia"  ng-controller="HistCtrl" style="height:100%">
+    <ul menu-l ng-model="menu.vista">
+     <li class="list"><a class="men" href="2009"><b>2009</a></li>
+     <li class="list"><a class="men" href="2016">2016</a></li>
+     <li class="list"><a class="men" href="filosofia">Filosofía</a></li>
+     <li class="list"><a class="men" href="objetivos">Objetivos</b></a></li>
+   </ul>
+   <section id="cont" ng-include="menu.vista"></section>
+   <script type="text/ng-template" id="2009"><h2 class="hh2">Fue creado en 2009 por:<br><br>- Brat Tech LLC, Google and community. </h2>  <br><br><br><img class="log" src="img/AngularJSL.png">
+   </script>
+
+   <script type="text/ng-template" id="2016"><h2 class="hh2">El 05 de Febrero fue lanzada última versión estable: <br><br> - 1.5.0</h2><br><br><br>
+   <img class="logo" src="img/AngularJSL.png"></script>
+
+
+   <script type="text/ng-template" id="filosofia"><h2 class="hh2">AngularJS construido en torno a la creencia de que la programación declarativa es la que debe<br> utilizarse para generar interfaces de usuario y enlazar componentes de software, mientras que la <br>programación imperativa es excelente para expresar la lógica de negocio.<br><br>AngularJS pone menos énfasis en la manipulación del DOM y mejora la testeabilidad y el rendimiento.</h2>
+    <br><br><br><br><br><br><br><br><br><img class="logo" src="img/AngularJSL.png">
+   </script>
+
+   <script type="text/ng-template" id="objetivos"><h2 class="hh2">Los objetivos de diseño:</h2><br><br>
+   <p id="xss" class="description">-Disociar la manipulación del DOM de la lógica de la aplicación.</p>
+   <p class="description">-Disociar la manipulación del DOM de la lógica de la aplicación.</p><br>
+      <p class="description">-Considerar a las pruebas de la aplicación como iguales en importancia</p>
+       <p class="description">a la escritura de la aplicación.</p><br>
+      <p class="description">-Disociar el lado del cliente de una aplicación del lado del servidor.</p>
+      <br><p class="description">-Guiar a los desarrolladores a través de todo el proceso del desarrollo</p>
+       <p class="description">de una aplicación.</p>
+   <img id="logo" src="img/logoO.png">
+
+   </script>
+ </div>
+
+  <div id="que">
+  <br>
+  <h1 id="q">::¿Qué es Angular JS?::</h1>
+<br><br><br><br>
+  <div id="queEs"  ng-init="descrip=[
+{desc: 'Es un framework de JavaScript.'},
+{desc:'Crear y mantener aplicaciones web de una sola página.'},
+{desc:'Modelo Vista Controlador (MVC).'}
+]">
+
+  <ul id="QueEs">
+     <li ng-repeat="x in descrip"><p id="contenido">{{ x.desc }}</p></li>
+</ul>
+
+
+ </div>
+<div id="caract">
+<div id="linea" ></div>
+  <div ng-controller='MyCtrl'>
+    <label class="tt" id="t1" >{{puntos}}</label><h1 class="titu">::Características::</label>
+  </div>
+
+
+  <div ng-controller='MyCtrl' id="primero">
+  <img class="imagen" src="img/ima.png">
+  <p class="nota">{{com1}}</p>
+    <button ng-click='toggleModal()' class="botonb" id="boto1">{{dato}}</button>
+    <modal-dialog show='modalShown' width='450px' height='60%' id="ventana1">
+      <br>
+      <br>
+        El enlace de datos en las aplicaciones Angular se realiza mediante
+        la sincronización entre los componentes del modelo y la vista.
+        <br>
+        <br>
+        La vista es una proyección del modelo en todo momento.
+        Cuando cambia el modelo, la vista refleja el cambio, y viceversa.
+    </modal-dialog>
+  </div>
+  <div ng-controller='MyCtrl' id="segundo">
+  <img class="imagen" src="img/directions.jpg">
+  <p class="nota">{{com2}}</p>
+    <button ng-click='toggleModal()' class="botonb" id="boto2">{{dato}}</button>
+    <modal-dialog show='modalShown' width='450px' height='60%'>
+      <br>
+      Las directivas son nuevos atrubutos que pueden ser agragados<br>
+      al documento HTML.
+      <br><br>
+      Las directivas en angularJS llevan el prefijo "ng-"
+      <br>
+      Ejemplos:
+      <br>
+      <br>
+     &nbsp;&nbsp;&nbsp;ng-app: Inicializa la aplicación Angular.
+     <br>
+     <br>
+     &nbsp;&nbsp;&nbsp;ng-init: Inicializa la aplicaión de datos.
+     <br>
+     <br>
+     &nbsp;&nbsp;&nbsp;ng-model:Enlaza los valores de los controles HTML <br>
+     &nbsp;&nbsp; a la aplicación de datos.
+
+    </modal-dialog>
+  </div>
+  <div ng-controller='MyCtrl' id="tercero">
+    <img class="imagen" src="img/pic.jpg">
+    <p class="nota">{{com3}}</p>
+    <button class="botonb" ng-click='toggleModal()' id="boto3">{{dato}}</button>
+    <modal-dialog show='modalShown' width='450px' height='60%'>
+      <br>
+      Los filtros en Angular nos permiten darle formato a los datos.
+      <br>
+      <br>
+      AngularJS provee de diversos filtros para darle el formato a los datos
+      que sea necesario.
+      <br>
+      <br>
+      Ejemplos:
+        <br><br>
+        &nbsp;&nbsp;lowercase <br>
+        &nbsp;&nbsp;orderBy <br>
+        &nbsp;&nbsp;uppercase <br>
+        &nbsp;&nbsp;date
+    </modal-dialog>
+  </div>
+</div>
+</body>
+</html>

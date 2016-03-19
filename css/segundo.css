@@ -1,0 +1,232 @@
+.ng-modal-overlay {
+  /* A dark translucent div that covers the whole screen */
+  position:absolute;
+  z-index:9999;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:#000000;
+  opacity: 0.8;
+}
+.ng-modal-dialog {
+  /* A centered div above the overlay with a box shadow. */
+  z-index:10000;
+  position: absolute;
+  width: 50%; /* Default */
+
+  /* Center the dialog */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+
+  background-color: #fff;
+  box-shadow: 4px 4px 80px #000;
+}
+.ng-modal-dialog-content {
+  padding:10px;
+  text-align: left;
+}
+.ng-modal-close {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 120%;
+  display: inline-block;
+  font-weight: bold;
+  font-family: 'arial', 'sans-serif';
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+#primero{
+
+	
+	height: 70%;
+	width: 370px;
+//	background-color: black;
+	position:  absolute;
+	left: 40px;
+	bottom: 60px;
+//	display: none;
+}
+#segundo{
+
+
+	position: absolute;
+	left: 500px;
+	bottom: 60px;
+	height: 70%;
+	width: 370px;
+//	background-color: green;
+//	display: none;
+}
+
+#xss{
+	visibility: hidden;
+}
+#tercero{
+	
+	position: absolute;
+	bottom: 60px;
+	left: 945px;
+	height: 70%;
+	width: 370px;
+//	background-color: red;
+//	display: none;
+}
+
+.tt{
+	text-align: center;
+	font-family: Calibri Light;
+	font-size: 60px;
+}
+.titu{
+	font-family: Calibri Light;
+	font-size: 43px;
+	position: absolute;
+	left: 560px;
+	bottom: 568px;
+}
+#boto1{
+	position: absolute;
+	font-size: 20px;
+
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	background-color: #00D5FF;
+
+
+}
+#boto2{
+	position: absolute;
+	bottom: 0;
+	font-size: 20px;
+
+	width: 100%;
+	height: 50px;
+	background:#0080FF;
+}
+#boto3{
+	background: #33FF48;
+	position: absolute;
+	font-size: 20px;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+}
+
+.botonb:before {
+ content:'';
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ width: 0px;
+ height: 50px;
+ background: rgba(255,255,255,0.3);
+ //border-radius: 5px;
+ transition: all 2s ease;
+}
+.botonb:hover:before {
+ width: 100%;
+}
+#linea{
+	width: 100%;
+	height: 20px;
+	background-color: #0080FF;
+}
+
+#caract{
+	font-family: 'arial', 'sans-serif'; 
+	margin-top: 300px;
+	position: absolute;
+	height: 100vh;
+}
+.imagen{
+	width: 100%;
+	height: 45%;
+}
+.nota{
+	padding-top: 25px;
+	font-size: 25px;
+	text-align: center;
+	color: rgba(124, 143, 144, 0.7);
+}
+.imagen:hover {
+     -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.01)
+   
+}
+#t1{
+position: absolute;
+left: 825px;
+bottom: 563px;
+color: #B93333;
+}
+#t2
+{
+position: absolute;
+left: 490px;
+bottom: 565px;
+color: #B93333;
+}
+#uno{
+	position: absolute;
+	left: 255px;
+	bottom: 150px;
+}
+#carga{
+	position: absolute;
+	left: 75px;
+	bottom: 150px;
+}
+
+#lista{
+	padding-top: 25px;
+	position: absolute;
+	left: 125px;
+
+
+}
+#buscar{
+	//padding-top: 25px;
+	position: absolute;
+	left: 110px;
+}
+
+#calcu{
+	position: absolute;
+	left: 130px;
+	bottom: 160px;
+}
+#calcu1{
+	position: absolute;
+	left: 130px;
+}
+#total{
+position: absolute;
+	left: 155px;
+	bottom: 120px;
+}
+#precio{
+	font-size: 15px;
+	font-family: arial;
+	position: absolute;
+	left: 35px;
+}
+#cantidad{
+font-size: 15px;
+	font-family: arial;
+	position: absolute;
+	left: 35px;
+	bottom: 160px;	
+}

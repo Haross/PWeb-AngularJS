@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <link rel="icon" type="image/png" href="img/logoO.png" />
+  <meta charset="UTF-8">
+  <title>Aprendiendo Angular</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/aprendiendo.css">
+  <script src=' angular.min.js'></script>
+  <link rel="stylesheet" type="text/css" href="js/js/jquery-ui-1.11.4.custom/jquery-ui.theme.css">
+  <link rel="stylesheet" type="text/css" href="js/js/jquery-ui-1.11.4.custom/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="js/js/jquery-ui-1.11.4.custom/jquery-ui.theme.css">
+  <link rel="stylesheet" type="text/css" href="js/js/new/jquery-ui-1.11.4.custom/jquery-ui.min.css">
+  <script type="text/javascript" src="js/js/new/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+  <script type="text/javascript" src="js/js/new/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+</head>
+
+<body >
+  <div class="menu">
+    <div class="icono">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+
+    <nav id="nave">
+      <ul class="indice">
+       <li><a href="#introduction">Introduction</a></li>
+       <li><a href="#expressions">Expressions </a></li>
+       <li><a href="#modules">Modules</a></li>
+       <li><a href="#directives">Directives</a></li>
+       <li><a href="#models">Model</a></li>
+       <li><a href="#controllers">Controllers</a></li>
+       <li><a href="#scopes">Scopes</a></li>
+       <li><a href="#filters">Filters</a></li>
+       <li><a href="">Services</a></li>
+       <li><a href="#events">Events</a></li>
+       <li><a href="#forms">Forms</a></li>
+       <li><a href="#validation">Validation</a></li>
+       <li><a href="">API</a></li>
+     </ul>
+   </nav>
+  </div >
+
+  <div id="introduction" class ="contenedor">
+    <div class="margen">
+      Introduction
+    </div><br>
+
+  <section class="estilo">
+    <p id="txt1"><b> Podemos añadirlo al html mediante: </b></p><br><br><br>
+    <p class="txt">http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js</p>
+    <p id="txt1"><b>Ó descargandolo desde:</b></p><br><br><br>
+    <p class="txt">https://angularjs.org/</p><br><br>
+    <img id="ima" src="img/AngularJSL.png">
+  </section>
+</div><br><br>
+
+<div id="expressions" class ="contenedor">
+  <div class="margen">
+    Expressions
+  </div><br>
+  <section class="estilo">
+    <p id="txt1"> Las expresiones se escriben dentro de llaves dobles:  <b> {{expresión}}</b> </p><br><br>
+    <pre class="CodigoEjem">
+      &lt;div ng-app=""&gt;
+          &lt;p&gt; Mi primera expresión {{ 5 + 5 }}&lt;/p&gt;
+      &lt;/div&gt;
+    </pre>
+    <p class="result"> Resultado: "Mi primera expresión: 10" </p>
+    <pre class="CodigoEjem">
+      &lt;div ng-app="" ng-init="myCol='pink'"&gt;
+          &lt;input style="background-color:{{myCol}}"
+            ng-model="myCol" value="{{myCol}}"&gt;
+      &lt;/div&gt;
+    </pre>
+    <p class="result">Resultado: <div id="colorE" ng-app="" ng-init="myCol='pink'">
+          <input style="background-color:{{myCol}}" ng-model="myCol" value="{{myCol}}">
+        </div></p>
+  </section>
+</div><br><br>
+
+<div id="modules" class="contenedor">
+  <div class="margen">
+    Modules
+  </div><br>
+  <section class="estilo"><br>
+    <p id="txt1"> Un módulo define una aplicación.<br><br>Un módulo se declara de la siguiente manera: </p><br><br><br><br><br><br>
+    <pre class="CodigoEjem">
+      angular.module('Nombre_del_modulo', ['ngRoute']);
+    </pre>
+    <p id="txt1"> Lo enlazamos a la vista en la cual trabajaremos con la directiva: </p><br><br><br><br>
+    <pre class="CodigoEjem">
+
+      &lt;html lang="es" ng-app="Nombre_del_modulo"&gt;
+    </pre>
+  </section>
+</div>
+
+<div id="directives" class="contenedor">
+  <div class="margen">
+    Directives
+  </div><br>
+  <section class="estilo"><br>
+    <p id="txt1"> Sirven para encapsular código HTML <br>Definimos una directiva de la siguiente manera:</p><br><br><br><br><br>
+    <pre class="CodigoEjem">
+
+      angular.module('myDirectives', []).
+          directive('myAwesomeDirective', function() {});
+    </pre>
+    <p id="txt1"> Usandolo en HTML</p><br><br><br>
+    <pre class="CodigoEjem">
+
+      &lt;my-awesome-directive&gt; &lt;/my-awesome-directive&gt;
+    </pre><pre class="result"> ng-app, ng-init, ng-model, ng-repeat</pre>
+  </section>
+</div>
+
+<div id="models" class="contenedor">
+  <div class="margen">
+    Models
+  </div><br>
+  <section class="estilo"><br>
+    <p id="txt1"> Permite obtener la información ingresada por el usuario en <br> algún elemento del formulario</p><br><br><br><br><br>
+    <pre class="CodigoEjem">
+
+    &lt;div ng-app="myApp" ng-controller="myCtrl"&gt;
+        Name: &lt;input ng-model="name"&gt;
+        &lt;h1&gt;You entered: {{name}}&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.name = "John Doe";
+        });
+    &lt;/script&gt;
+
+    </pre>
+
+  </section>
+</div>
+
+<div id="controllers" class="contenedor">
+  <div class="margen">
+    Controllers
+  </div><br>
+  <section class="estilo"><br>
+    <p id="txt1"> Permite obtener la información ingresada por el usuario en <br> algún elemento del formulario</p><br><br><br><br><br><br>
+    <pre class="CodigoEjem">
+      &lt;div&gt;
+        Full Name: {{firstName + " " + lastName}}
+      &lt;div/&gt;
+      &lt;script&gt;
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+          $scope.firstName = "John";
+          $scope.lastName = "Doe";
+        });
+      &lt;script/&gt;
+    </pre>
+    <pre class="result"> Resultado: Full Name: John Doe</pre>
+  </section>
+</div>
+
+<div id="scopes" class="contenedor">
+  <div class="margen">
+    Scopes
+  </div><br>
+  <section class="estilo"><br>
+    <p id="txt1"> Hace visible la información necesaria para implementar la aplicación,<br> desde el controlador a la vista y desde la vista al controlador. </p><br><br><br><br><br><br>
+    <pre class="CodigoEjem">
+
+      var app = angular.module('myApp', []);
+      app.controller('myCtrl', function($scope) {
+        $scope.carname = "Volvo";
+      });
+
+    </pre>
+    <pre class="result"> Resultado: Volvo</pre>
+
+  </section>
+</div>
+
+<div id="filters" class="contenedor">
+  <div class="margen">
+    Filters
+  </div><br>
+  <section class="estilo"><br>
+    <p id="txt1"> Sirven para transformar los datos o dar formato a los datos. </p><br><br>
+    <ul id="txt1"><li> <strong>currency</strong> Dar formato a un número a un formato de moneda.</li>
+    <li><strong>date</strong> Dar formato a una fecha a un formato especificado.</li>
+    <li><strong>filter</strong> Seleccionar un subconjunto de elementos de una arreglo.</li>
+    <li><strong>limitTo</strong> Limita un arreglo o cadena.</li>
+    <li><strong>lowercase</strong> Dar formato a una cadena a minúsculas.</li>
+    <li><strong>number</strong> Dar formato a un número en una cadena.</li>
+    <li><strong>orderBy</strong> Ordena un arreglo por una expresión.</li>
+    <li><strong>uppercase</strong> Dar formato a una cadena a mayúsculas.</li></ul><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <pre class="CodigoEjem">
+
+      &lt;p&gt;The name is {{ lastName | uppercase }}&lt;/p&gt;
+
+    </pre>
+    <pre class="result"> Resultado: The name is DOE</pre>
+  </section>
+</div>
+<div id="events" class="contenedor">
+  <div class="margen">
+    Events
+  </div><br>
+  <section class="estilo"><br>
+    <p id="txt1">Nos permiten usar funciones AngularJS en ciertos eventos de usuarios. </p><br><br><br>
+    <ul id="txt1"><li >ng-mousedown.</li>
+    <li>ng-mouseup.</li>
+    <li>ng-click.</li>
+    <li>ng-mouseleave.</li>
+    <li>ng-mouseover.</li></ul><br><br><br><br><br><br><br><br><br>
+    <pre class="CodigoEjem">
+    &lt;div ng-app="myApp" ng-controller="myCtrl"&gt;
+    &lt;h1 ng-mousemove="count = count + 1"&gt;Over me!&lt;/h1&gt;
+    &lt;h2&gt;{{ count }}&lt;/h2&gt;
+    &lt;/div&gt;
+          &lt;script&gt;
+          var app = angular.module('myApp', []);
+            app.controller('myCtrl', function($scope) {
+              $scope.count = 0;
+          });&lt;/script&gt;
+    </pre>
+
+  </section>
+</div>
+<div id="forms" class="contenedor">
+  <div class="margen">
+   Forms
+  </div><br>
+  <section class="estilo"><br>
+    <p id="txt1"> Los formularios en AngularJS nos proveen de enlace de datos<br> y validaciones en los controles HTML</p><br><br><br><br><br><br>
+    <pre class="CodigoEjem">
+
+       &lt;div ng-app=""&gt;
+          &lt;form&gt;
+          Ingrese su nombre
+          First name: &lt;input type="text" ng-model="firstname"&gt;
+          &lt;/form&gt;
+          &lt;h1&gt;You entered:{{nombre}}&lt;/h1&gt;
+      &lt;div/&gt;
+
+    </pre>
+  <!--  <pre class="result"> Resultado: Volvo</pre>-->
+
+  </section>
+</div>
+<div id="validation" class="contenedor">
+  <div class="margen">
+   Validations
+  </div><br>
+  <section class="estilo"><br>
+    <p id="txt1">AngularJS ofrece validaciones desde el lado del cliente<br> al monitorear el estado de los formualrios y campos a llenar</p><br><br><br><br><br><br>
+    <br>
+    <br>
+    <pre class="CodigoEjem">
+
+      &lt;body ng-app=""&gt;
+          &lt;form name="myForm"&gt;
+          &lt;input type="text" name= "myInput"
+          ng-model="myInput"&gt;
+          &lt;/form&gt;
+          &lt;p&gt;The input's valid state is:&lt;/p&gt;
+          &lt;h1&gt;{{myForm.myInput.$valid}}&gt;/h1&gt;
+      &lt;body/&gt;
+
+    </pre>
+  <!--  <pre class="result"> Resultado: Volvo</pre>-->
+
+  </section>
+</div>
+
+<script src="js/index.js"></script>
+</body>
+</html>

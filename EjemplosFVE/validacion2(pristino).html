@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<script src=' angular.min.js'></script>  
+<style>
+form.ng-pristine {
+    background-color:lightblue;
+}
+form.ng-dirty {
+    background-color:pink;
+}
+</style>
+<body ng-app="">
+
+<form name="myForm">
+<p>Escriba dentro del Input:</p>
+
+<input name="myName" ng-model="myName" required>
+
+<p>El formulario tiene un color azul cuando no ha sido modificado y cambia a rosado cuando ya ha sido modificado.</p>
+</form>
+
+</body>
+</html>
